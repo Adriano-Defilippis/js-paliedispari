@@ -32,11 +32,14 @@ function randomNum(){
 }
 
 // Funzione per riscontro se la somma dei numeri è pari o dispari e se corrisponde alla scelta utente
-function controllo(num1, num2, input){
+function controllo(num1, num2){
 
   var input;
 
   var somma = num1 + num2;
+
+  console.log("Somma  ", somma);
+
 
   var risultato;
 
@@ -50,12 +53,6 @@ function controllo(num1, num2, input){
   }
 
   return risultato;
-
-  if (risultato === input) {
-    alert('Indovinato');
-  }else if (risultato !== input) {
-    alert('Riprova');
-  }
 
 
 }
@@ -73,4 +70,10 @@ console.log("numUtente:  ",numUtente);
 
 console.log("NumCpu  ", numCpu);
 
-console.log(controllo(numUtente, numCpu, scelta));
+console.log("Somma dei numeri Random: ", controllo(numUtente, numCpu, scelta));
+
+if (controllo(numUtente, numCpu, scelta) === scelta) {
+  alert('Indovinato');
+}else if (controllo(numUtente, numCpu, scelta) !== scelta) {
+  alert('Riprova');
+}
