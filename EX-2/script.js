@@ -5,36 +5,36 @@
 
 
 // Funzione per controllare se l'input corrispinde a pari o dispari
-function controlloInput(input) {
-  var input;
-
-  input;
-
-  console.log("Input iniziale: ", input);
-
-  // Controllo sul tipo di input inserito
-  if (input !== "DISPARI" || input !== "PARI"){
-
-    alert('Devi scegliere o pari o dispari amico bello');
-
-    prompt = ("Devi digitare o pari o dispari")
-
-    console.log("Siamo nel ciclo while se imput pari o dispari: ",input);
-
-  }
-
-}
+// function controlloInput(input) {
+//   var input;
+//
+//   input;
+//
+//   console.log("Input iniziale: ", input);
+//
+//   // Controllo sul tipo di input inserito
+//   while (input !== "DISPARI" || input !== "PARI"){
+//
+//     alert('Devi scegliere o pari o dispari amico bello');
+//
+//     console.log("Siamo nel ciclo while se imput pari o dispari: ",input);
+//
+//   }
+//
+// }
 
 
 // Funzione per generare numeri random
 function randomNum(){
-  var num = Math.floor(Math.random() * 21);
+  var num = Math.floor(Math.random() * 11);
 
   return num;
 }
 
 // Funzione per riscontro se la somma dei numeri è pari o dispari e se corrisponde alla scelta utente
-function controllo(num1, num2){
+function controllo(num1, num2, input){
+
+  var input;
 
   var somma = num1 + num2;
 
@@ -44,13 +44,19 @@ function controllo(num1, num2){
 
     risultato = "DISPARI";
 
-    console.log(risultato);
 
   }else{
     risultato = "PARI";
   }
 
   return risultato;
+
+  if (risultato === input) {
+    alert('Indovinato');
+  }else if (risultato !== input) {
+    alert('Riprova');
+  }
+
 
 }
 
@@ -59,10 +65,12 @@ var scelta = prompt('Pari o dispari..? Tenta la fortuna').toUpperCase();
 var numUtente = randomNum();
 var numCpu = randomNum();
 
-controlloInput(scelta);
+// controlloInput(scelta);
 
-console.log(numUtente);
+console.log(scelta);
 
-console.log(numCpu);
+console.log("numUtente:  ",numUtente);
 
-controllo(numUtente, numCpu);
+console.log("NumCpu  ", numCpu);
+
+console.log(controllo(numUtente, numCpu, scelta));
