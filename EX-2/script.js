@@ -6,7 +6,9 @@
 
 // Funzione per controllare se l'input corrispinde a pari o dispari
 function controlloInput(input) {
-  var input = input.toUpperCase();
+  var input;
+
+  input;
 
   console.log("Input iniziale: ", input);
 
@@ -15,7 +17,7 @@ function controlloInput(input) {
 
     alert('Devi scegliere o pari o dispari amico bello');
 
-    input = prompt('Reinserisci la parola');
+    prompt = ("Devi digitare o pari o dispari")
 
     console.log("Siamo nel ciclo while se imput pari o dispari: ",input);
 
@@ -31,9 +33,29 @@ function randomNum(){
   return num;
 }
 
+// Funzione per riscontro se la somma dei numeri è pari o dispari e se corrisponde alla scelta utente
+function controllo(num1, num2){
+
+  var somma = num1 + num2;
+
+  var risultato;
+
+  if (somma % 2 !== 0){
+
+    risultato = "DISPARI";
+
+    console.log(risultato);
+
+  }else{
+    risultato = "PARI";
+  }
+
+  return risultato;
+
+}
 
 // Esecuzione del codice
-var scelta = prompt('Pari o dispari..? Tenta la fortuna');
+var scelta = prompt('Pari o dispari..? Tenta la fortuna').toUpperCase();
 var numUtente = randomNum();
 var numCpu = randomNum();
 
@@ -42,3 +64,5 @@ controlloInput(scelta);
 console.log(numUtente);
 
 console.log(numCpu);
+
+controllo(numUtente, numCpu);
