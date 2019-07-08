@@ -28,13 +28,17 @@ function controlloInput(input) {
 function randomNum(){
   var num = Math.floor(Math.random() * 21);
 
-  console.log(num);
+  return num;
 }
 
 
 // Esecuzione del codice
 var scelta = prompt('Pari o dispari..? Tenta la fortuna');
+var numUtente = randomNum();
+var numCpu = randomNum();
 
 controlloInput(scelta);
 
-randomNum();
+console.log(numUtente);
+
+console.log(numCpu);
