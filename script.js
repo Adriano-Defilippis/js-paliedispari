@@ -4,7 +4,10 @@ function parPalindroma(input) {
   var input = prompt("Inserisci una parola palindroma");
 
   console.log("Input iniziale: ", input);
-  while (!isNaN(input) || input == 0){
+
+  // Controllo sul tipo di input inserito
+  while (!isNaN(input)){
+
     console.log("Siamo nel ciclo while se l'input è un numero: ",input);
 
     alert('I numeri non sono palindromi');
