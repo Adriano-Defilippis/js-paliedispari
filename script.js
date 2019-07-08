@@ -2,10 +2,6 @@
 function controlloInput(input) {
   var input;
 
-
-  var messaggio;
-
-
   console.log("Input iniziale: ", input);
 
   // Controllo sul tipo di input inserito
@@ -18,7 +14,6 @@ function controlloInput(input) {
     console.log("Siamo nel ciclo while se l'input è un numero: ",input);
 
   }
-
 
 }
 
