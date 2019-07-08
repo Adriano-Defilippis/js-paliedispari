@@ -1,3 +1,14 @@
 // L’utente sceglie pari o dispari e un numero da 1 a 5.
 // Generiamo un numero random (sempre da 1 a 5) per il computer e
 // dichiariamo chi ha vinto.
+
+var scelta = prompt('Pari o dispari..? Tenta la fortuna');
+
+// Funzione per generare numeri randoms
+function randomNum(){
+  var num = Math.floor(Math.random() * 21);
+
+  console.log(num);
+}
+
+randomNum();
