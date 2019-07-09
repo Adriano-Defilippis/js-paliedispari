@@ -50,7 +50,7 @@ console.log("Stringa reversata  ",reverseStr);
 
 
 // Eseguo il codice
-var parola  = prompt("Inserisci una parola palindroma");
+var parola  = prompt("Inserisci una parola palindroma").toUpperCase();
 
 controlloInput(parola);
 

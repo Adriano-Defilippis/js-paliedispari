@@ -25,8 +25,8 @@
 
 
 // Funzione per generare numeri random
-function randomNum(){
-  var num = Math.floor(Math.random() * 11);
+function randomNum(max){
+  var num = Math.floor(Math.random() * (max) + 1);
 
   return num;
 }
@@ -34,14 +34,11 @@ function randomNum(){
 // Funzione per riscontro se la somma dei numeri è pari o dispari e se corrisponde alla scelta utente
 function controllo(num1, num2){
 
-  var input;
+  var risultato;
 
   var somma = num1 + num2;
 
   console.log("Somma  ", somma);
-
-
-  var risultato;
 
   if (somma % 2 !== 0){
 
@@ -59,10 +56,9 @@ function controllo(num1, num2){
 
 // Esecuzione del codice
 var scelta = prompt('Pari o dispari..? Tenta la fortuna').toUpperCase();
-var numUtente = randomNum();
-var numCpu = randomNum();
+var numUtente = randomNum(6);
+var numCpu = randomNum(6);
 
-// controlloInput(scelta);
 
 console.log(scelta);
 
@@ -72,8 +68,8 @@ console.log("NumCpu  ", numCpu);
 
 console.log("Somma dei numeri Random: ", controllo(numUtente, numCpu, scelta));
 
-if (controllo(numUtente, numCpu, scelta) === scelta) {
+if (controllo(numUtente, numCpu) === scelta) {
   alert('Indovinato');
-}else if (controllo(numUtente, numCpu, scelta) !== scelta) {
+}else if (controllo(numUtente, numCpu) !== scelta) {
   alert('Riprova');
 }
