@@ -25,8 +25,8 @@
 
 
 // Funzione per generare numeri random
-function randomNum(max){
-  var num = Math.floor(Math.random() * (max) + 1);
+function randomNum(min, max){
+  var num = Math.floor(Math.random() * (max - min) + min);
 
   return num;
 }
@@ -56,8 +56,8 @@ function controllo(num1, num2){
 
 // Esecuzione del codice
 var scelta = prompt('Pari o dispari..? Tenta la fortuna').toUpperCase();
-var numUtente = randomNum(6);
-var numCpu = randomNum(6);
+var numUtente = randomNum(1, 6);
+var numCpu = randomNum(1, 6);
 
 
 console.log(scelta);
